@@ -1,0 +1,9 @@
+html, body { margin: 0; height: 100%; background: #05070d; overflow: hidden; }
+body { display: flex; align-items: center; justify-content: center; }
+/* keeps a 16:9 shape on any window size */
+canvas {
+  width: min(100vw, 100vh * 16 / 9);
+  aspect-ratio: 16 / 9;
+  display: block; cursor: pointer;
+  box-shadow: 0 0 40px rgba(0, 220, 255, .25);
+}
