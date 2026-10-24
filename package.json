@@ -1,9 +1,15 @@
 {
   "name": "rift-runner",
   "version": "1.0.0",
-  "description": "Rift Runner - 2D desktop game (SoftaBlitz 2026, Team DEWARE)",
+  "description": "Rift Runner - a multiverse-themed 2D desktop game (Softablitz 2026, Team Deware)",
   "main": "main.js",
-  "scripts": { "start": "electron .", "test": "node --test tests/game.test.js" },
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/logic.test.js"
+  },
+  "author": "Team Deware",
   "license": "MIT",
-  "devDependencies": { "electron": "^33.0.0" }
+  "devDependencies": {
+    "electron": "^33.0.0"
+  }
 }
