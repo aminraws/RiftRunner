@@ -1,7 +1,13 @@
-// Basic tunable numbers.
-const CONFIG = Object.freeze({ //Object.freeze() prevents the object's existing properties from being changed, added, or removed.
-  W: 960, H: 540, // w h are dimessions canvas dim..
-  //y from top
-  CLOAK: { x: 200, w: 38, h: 30, gravity: 1500, flapV: -440 },//cloak : our character
-  BARRIER: { w: 76, gap: 180, speed: 240, interval: 1.6, margin: 60 } //obstacle setting
+'use strict';
+// All game numbers live here. Change values here only.
+const W = 960, H = 540, FLOOR = H - 18, STEP = 1 / 120;   // play area, ground line, fixed physics step
+const CFG = Object.freeze({
+  GRAVITY: 1500,      // B1: constant downward pull
+  FLAP_V: -420,       // B1: upward thrust on key press / click
+  SPEED: 230,         // B2: barrier speed (px/s)
+  GAP: 190,           // B2: gap height
+  SPACE: 320,         // B2: distance between two barriers
+  BARRIER_W: 84, POOL: 5, MARGIN: 55, MAX_SHIFT: 230
 });
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));//keeps the values in allowed range
+const rand = (a, b) => a + Math.random() * (b - a);//generates random values
